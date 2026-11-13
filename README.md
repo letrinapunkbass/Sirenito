@@ -13,7 +13,7 @@
  que emula el funcionamiento del HW para poder utilizarlo con
  tu DAW favorito si no te sobran las entradas de linea.
 
-![Sirenito](agro_mini.jpg)
+![Sirenito](agro_mini.png)
 
 ## CARACTERÍSTICAS
 
