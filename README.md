@@ -7,9 +7,9 @@
  |___/_|_|  \___|_| |_|_|\__\___/
 ```
 
- El Sirenito, es un sinte tipo DUB Siren.
- Funciona como intrumento stand-alone y como controlador MIDI.
- Tambien he desarollado un VST (solo para MacOS y en version beta) 
+ El Sirenito es un sinte tipo DUB Siren.
+ Funciona como instrumento stand-alone y controlador MIDI.
+ Tambien hemos desarollado un VST (solo para MacOS y en version beta) 
  que emula el funcionamiento del HW para poder utilizarlo con
  tu DAW favorito si no te sobran las entradas de linea.
 
@@ -20,10 +20,10 @@
 AUDIO
 - 4 tipos de onda: seno, sierra, cuadrada y laser.
 - 4 LFO: seno, sierra, cuadrada y off.
-- 8 potes: Pitch, Rate, Depth, Decay, Delay Time, Feedback, Sweep, Volume.
-- Envolvente rápida con decay de 0,05 a 4 s.
+- 8 potes: Pitch, Rate, Depth, Decay, Sweep, Delay Time, Feedback, Volume.
+- Envolvente rápida con decay de 0,05 a 4s.
 - Sweep de ±1200 Hz.
-- Delay de hasta 1,2 s con feedback, filtro y bypass.
+- Delay de hasta 1,2s con feedback, filtro y bypass.
 - Salida I2S a 44,1 kHz / 16 bits, mono en L y R.
 
 CONTROL
@@ -31,22 +31,22 @@ CONTROL
 - Dos selectores de 4 posiciones: tipo de onda y LFO.
 - USB-MIDI class-compliant, sin drivers.
 - Nota 60 para trigger y CC 20-29 para los parámetros.
-- El firmware envía MIDI; no recibe.
+- El firmware envía MIDI, no recibe.
 
 PLUGIN VST2
-- macOS Intel, (hecho pensando en nuestro Macbook del 2012)
+- macOS Intel (hecho pensando en nuestro Macbook del 2012).
 - Mismo motor DSP que el firmware.
 - Mismos controles que la versión física.
 - Responde a nota 60 y CC 20-29.
 
 ALIMENTACIÓN
 - Pila de 9V con interruptor y regulador a 5V.
-- También por el USB.
+- También por USB.
 
 ## CÓMO SUENA
 
-La onda la genera el ESP32. El LFO la mueve, el trigger abre la envolvente
-y el sweep le pega el bajón. El delay va al final, con feedback y filtro.
+La onda la genera el ESP32. El LFO la mueve, el Trigger abre la envolvente
+y el Sweep le pega el bajón. El Delay va al final, con Feedback y filtro.
 En modo laser, Rate marca la cadencia y Decay la caída.
 
 ## HARDWARE
@@ -73,10 +73,10 @@ En modo laser, Rate marca la cadencia y Decay la caída.
 
 
     El USB OTG es el mismo puerto que usa para MIDI y para alimentar la placa.
-    No hay una entrada de alimentación aparte. La DevKit tiene dos USB:
-    usa el OTG; el otro es UART y no lleva MIDI.
+    No hay una entrada de alimentación adicional. La DevKit tiene dos USB,
+    usa el OTG. El otro es UART y no lleva MIDI.
 
-    Usa pila o USB, no las dos a la vez. Con USB, deja el interruptor en OFF.
+    Usa pila o USB, no las dos a la vez. Con USB deja el interruptor en OFF.
     Regulador y pila van a GND común.
 
 ### Conexiones
@@ -91,7 +91,7 @@ En modo laser, Rate marca la cadencia y Decay la caída.
         Sweep     -------->| GPIO1              |
         Volume    -------->| GPIO2              |
                            |                    |
-        Portadora -------->| GPIO4/5/6/7        |
+        Onda      -------->| GPIO4/5/6/7        |
         LFO       -------->| GPIO9/10/11/12     |
         Trigger   -------->| GPIO42             |
         LED       <--------| GPIO38             |---[330R]---|>|--- GND
