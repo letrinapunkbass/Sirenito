@@ -8,8 +8,8 @@
 ```
 
  El Sirenito, es un sinte tipo DUB Siren.
- Funciona como intrumento stand-alone y como controlador MIDI,
- tambien he desarollado un VST (solo para MacOS y en version beta) 
+ Funciona como intrumento stand-alone y como controlador MIDI.
+ Tambien he desarollado un VST (solo para MacOS y en version beta) 
  que emula el funcionamiento del HW para poder utilizarlo con
  tu DAW favorito si no te sobran las entradas de linea.
 
